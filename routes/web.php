@@ -1,0 +1,33 @@
+<?php
+
+use Illuminate\Support\Facades\Route;
+
+use App\Http\Controllers\MahasiswaController;
+
+Route::get('/about', function () {
+    return view('halaman-about');
+});
+
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('/nama/{param1}', [MahasiswaController::class, 'show']);
+
+// Route::get('/pcr', function () {
+//    return 'Selamat Datang di Website Kampus PCR!';
+// });
+
+// Route::get('/mahasiswa', function () {
+//    return 'Halo Mahasiswa';
+// });
+
+
+
+// Route::get('/nim/{param1}', function ($param1 ='') {
+//     return 'NIM Saya: '.$param1;
+// });
+
+// Route::get('/mahasiswa', function () {
+//     return 'Halo Mahasiswa';
+// })->name('mahasiswa.show');
